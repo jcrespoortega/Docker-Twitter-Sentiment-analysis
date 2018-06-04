@@ -1,0 +1,17 @@
+tweetanalisys:
+  image: jcrespo2017/fin_jc
+  ports:
+    - "8888:8888"
+    - "8000:80"
+    - "7180:7180"
+  hostname: quickstart.cloudera
+  environment:
+    - DONWLOAD_TIME
+    - TWEETER__ACOUNT1
+    - TWEETER_ACCOUNT2
+    - TWEETER_ACCOUNT3
+    - TWEETER_ACCOUNT4
+  links:
+    - db
+db:
+   image: mongo

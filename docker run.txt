@@ -1,0 +1,20 @@
+BUILD DOCKER:
+
+El primer paso será la creación de la imagen, desde el términal nos colocamos en la carpeta de que contiene el Dockerfile de la imagen y
+realizamos la siguiente ejecución:
+
+$ sudo docker build -t nombreimagen .
+
+Para obtener el fichero de mongo lo debemos descargar de Docker Hub, por eso realizaremos la siguiente:
+
+$sudo docker pull mongo
+
+Una vez tenemos las dos imagenes en local nos colocamos en la carpeta en la cual se encuentra el ficho docker-compese.yml e introducimos
+el siguiente comando:
+
+$ sudo docker run -e DONWLOAD_TIME= tiempo de descarga en segundos -e TWEETER_ACCOUNT1= access_token_key  -e TWEETER_ACCOUNT2= access_token_secret   -e TWEETER_ACCOUNT3= consumer_key   -e TWEETER_ACCOUNT4= consumer_secret  tweetanalisys  
+
+
+Este es el proceso cuando queremos construir la aplicación desde la imagen en local. Es posible tener la aplicación sin crear las imagenes en local siempre que 
+tengamos el docker-compose-yml. En este caso deberiamos volver a seguir el último paso del apartado anterior, la diferencia es que al introducirlo
+ambas imagenes se descargaran de Docker Hub, debido a que la imagen creada esta creada sobre la imagen de cloudera el tiempo de descargar es elevado. 
