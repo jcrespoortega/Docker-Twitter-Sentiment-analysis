@@ -6,4 +6,4 @@ In this app I develop a Sentiment Analysis in the platform of Twitter, with thei
 
 Sentiment Analysis is based in these case in dictionaries, in order to make it works in Cloudera image I develop an old Map Reduce with mrjob library in python and when the procces is finished the result are stored in MongoDB.
 
-The image build is available in Docker Hub with the name of jcrespo2017/fin_jc.
+The image build is also available in Docker Hub with the name of jcrespo2017/fin_jc.
