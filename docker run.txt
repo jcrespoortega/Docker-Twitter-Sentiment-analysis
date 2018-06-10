@@ -1,20 +1,17 @@
-BUILD DOCKER:
+DOCKER BUILD:
 
-El primer paso será la creación de la imagen, desde el términal nos colocamos en la carpeta de que contiene el Dockerfile de la imagen y
-realizamos la siguiente ejecución:
+In order to run the container first you need to build the image. In the directory which contains Dockerfile in terminal run the next command (LINUX User):
 
 $ sudo docker build -t nombreimagen .
 
-Para obtener el fichero de mongo lo debemos descargar de Docker Hub, por eso realizaremos la siguiente:
+To download MongoDB Image run the next command, it will take some time:
 
 $sudo docker pull mongo
 
-Una vez tenemos las dos imagenes en local nos colocamos en la carpeta en la cual se encuentra el ficho docker-compese.yml e introducimos
-el siguiente comando:
+At this time we have all the images to build the container Mongo DB and Cloudera images. In the directory which containsdocker-compese.yml in terminal run the next command (LINUX User):
 
-$ sudo docker run -e DONWLOAD_TIME= tiempo de descarga en segundos -e TWEETER_ACCOUNT1= access_token_key  -e TWEETER_ACCOUNT2= access_token_secret   -e TWEETER_ACCOUNT3= consumer_key   -e TWEETER_ACCOUNT4= consumer_secret  tweetanalisys  
+$ sudo docker run -e DONWLOAD_TIME= dwonload time in seconds -e TWEETER_ACCOUNT1= access_token_key  -e TWEETER_ACCOUNT2= access_token_secret   -e TWEETER_ACCOUNT3= consumer_key   -e TWEETER_ACCOUNT4= consumer_secret  tweetanalisys  
 
+This is the process to build the image in local, however if we have docker.compese.yml you can only run the last command and it works fine. Take into account that download image time cloud take a while.
 
-Este es el proceso cuando queremos construir la aplicación desde la imagen en local. Es posible tener la aplicación sin crear las imagenes en local siempre que 
-tengamos el docker-compose-yml. En este caso deberiamos volver a seguir el último paso del apartado anterior, la diferencia es que al introducirlo
-ambas imagenes se descargaran de Docker Hub, debido a que la imagen creada esta creada sobre la imagen de cloudera el tiempo de descargar es elevado. 
+In the last command all the variables are necesary to run the docker, first is the time in second that you want to download data, and the rest are yours Twitter API Key.
