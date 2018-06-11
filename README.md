@@ -1,6 +1,6 @@
 # Docker Twitter Sentiment analysis
 
-Docker's Cointaners are very useful tool because its have some advantages over virtual machines as time and ran memory resources optimization.
+Docker's Cointaners are useful tools because its have some advantages over virtual machines as time and ran memory resources optimization.
 
 In this app I develop a Sentiment Analysis in the platform of Twitter, with their Streaming API in order to feed with data the system. The proyect is developed with Docker Compose developing an image which is bases on Clodera and Mongo DB images.  
 
