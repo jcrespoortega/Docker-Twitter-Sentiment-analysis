@@ -4,14 +4,14 @@ In order to run the container first you need to build the image. In the director
 
 $ sudo docker build -t nombreimagen .
 
-To download MongoDB Image run the next command, it will take some time:
+To download MongoDB Image, run the next command, it will take some time:
 
-$sudo docker pull mongo
+$ sudo docker pull mongo
 
-At this time we have all the images to build the container Mongo DB and Cloudera images. In the directory which containsdocker-compese.yml in terminal run the next command (LINUX User):
+At this time we have all the images to build the container, Mongo DB and Cloudera images. In the directory which contains docker-compese.yml in terminal run the next command (LINUX User):
 
 $ sudo docker run -e DONWLOAD_TIME= dwonload time in seconds -e TWEETER_ACCOUNT1= access_token_key  -e TWEETER_ACCOUNT2= access_token_secret   -e TWEETER_ACCOUNT3= consumer_key   -e TWEETER_ACCOUNT4= consumer_secret  tweetanalisys  
 
-This is the process to build the image in local, however if we have docker.compese.yml you can only run the last command and it works fine. Take into account that download image time cloud take a while.
+This is the process to run the image in local, however if you have docker.compese.yml you can only run the last command and it works fine. Take into account that download images takes a while.
 
-In the last command all the variables are necesary to run the docker, first is the time in second that you want to download data, and the rest are yours Twitter API Key.
+Last command needs all the variables to run the docker, first is the time in second that you want to download data from Twitter, and the rest are yours Twitter API Key.
